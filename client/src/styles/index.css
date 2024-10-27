@@ -1,0 +1,17 @@
+/* Student Name: Ebibulukemi Emiowei (Eric)
+Student ID: 301367312
+Date: 09/29/2024 */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-jost bg-gray-900 text-white;
+}
+
+.custom-class {
+  @apply p-4 bg-blue-500 text-center rounded-lg;
+}
