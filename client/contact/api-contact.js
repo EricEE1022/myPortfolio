@@ -71,4 +71,27 @@ const remove = async (params, credentials) => {
     console.log(err);
   }
 };
-export { create, list, read, update, remove };
+
+const removeAll = async (credentials) => {
+  try {
+    let response = await fetch("/api/contacts/", {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${credentials.t}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status} - ${response.statusText}`);
+    }
+
+    return await response.json();
+  } catch (err) {
+    console.error("Failed to delete contacts:", err);
+    return { error: err.message }; 
+  }
+};
+
+export { create, list, read, update, remove, removeAll };

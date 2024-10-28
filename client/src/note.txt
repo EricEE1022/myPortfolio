@@ -1,0 +1,80 @@
+// import React, { useState } from "react";
+
+// const Counter = () => {
+//     const [count, setCount] = useState(0);
+//     const handleCount = () => {
+//         setCount(count + 1);
+//     };
+//     return (
+//         <header className="min-h-screen bg-[#1d1b19] text-white flex items-center justify-center pb-4 pt-24">
+//             <div>
+//                 <h1 className="text-white font-bold">You clicked {count} times</h1>
+//                 <button className="bg-white rounded-md p-2 text-black" onClick={handleCount}>Click me</button>
+//             </div> 
+//         </header>
+//     );
+// };
+
+// export default Counter;
+
+*****************************************************************
+
+// import React, { useReducer } from 'react';
+// // Define a reducer function
+// const reducer = (state, action) => {
+//   switch (action.type) {
+//     case 'INCREMENT':
+//       return { count: state.count + 1 };
+//     case 'DECREMENT':
+//       return { count: state.count - 1 };
+//     default:
+//       return state;
+//   }
+// };
+// function Counter() {
+//   // Initialize state using useReducer
+//   const [state, dispatch] = useReducer(reducer, { count: 0 });
+//   return (
+//     <div className="min-h-screen bg-[#1d1b19] text-white flex items-center justify-center pb-4 pt-24">
+//       <h1>Count: {state.count}</h1>
+//       <button onClick={() => dispatch({ type: 'INCREMENT' })}>Increment</button>
+//       <button onClick={() => dispatch({ type: 'DECREMENT' })}>Decrement</button>
+//     </div>
+//   );
+// }
+// export default Counter;
+
+****************************************************************
+
+// import React, { useState } from "react";
+// import { FaStar } from "react-icons/fa";
+//  const StarRating = ({ totalStars = 5 }) => {
+//   const [selectedStars, setSelectedStars] = useState(0);
+//   const createArray = (length) => {
+//     return Array.from({ length }, (_, index) => index);
+//   };
+//   return (
+//     <div className="min-h-screen bg-[#1d1b19] text-white items-center pb-4 pt-24">
+//     <div className="flex">
+//     {createArray(totalStars).map((n, i) => (
+//         <Star
+//           key={i}
+//           selected={selectedStars > i}
+//           onSelect={() => setSelectedStars(i + 1)}
+//         />
+//       ))}
+//     </div>
+//       
+//       <div>
+//         {selectedStars} of {totalStars} stars
+//       </div>
+//     </div>
+//   );
+// }
+// const Star = ({ selected = false, onSelect }) => (
+//   <FaStar color={selected ? "red" : "grey"} onClick={onSelect} />
+// );
+
+// export default StarRating;
+
+************************************************************
